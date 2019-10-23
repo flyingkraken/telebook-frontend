@@ -1,12 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
+
+import config from 'src/config'
+
+import { Provider } from 'react-redux'
+import configureStore from 'store/configureStore'
+import { ConnectedRouter } from 'react-router-redux'
+
 import './styles/index.css';
-import App from './components';
+import MasterComponent from './components/master'
+
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const theme = createMuiTheme({
+  palette: {
+	  primary: { main: config.theme.primaryColor },
+	  secondary: { main: config.theme.secondaryColor }
+  }
+})
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+ReactDOM.render(
+		<Provider store={configureStore.store}>
+			<ConnectedRouter history={configureStore.history}>
+				<MuiThemeProvider theme={theme}>
+					<MasterComponent />
+				</MuiThemeProvider>
+			</ConnectedRouter>
+		</Provider>,
+	document.getElementById('root')
+)
+
 serviceWorker.register();
