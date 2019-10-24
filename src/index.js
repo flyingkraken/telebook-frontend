@@ -22,7 +22,7 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
 		<Provider store={configureStore.store}>
-			<ConnectedRouter history={configureStore.history}>
+			<ConnectedRouter store={configureStore.store} history={configureStore.history}>
 				<MuiThemeProvider theme={theme}>
 					<MasterComponent />
 				</MuiThemeProvider>

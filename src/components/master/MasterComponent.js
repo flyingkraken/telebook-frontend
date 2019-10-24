@@ -65,41 +65,40 @@ export class MasterComponent extends Component {
 
   componentDidMount () {
 
-    // this._authourizeService.onAuthStateChanged((isVerifide, user) => {
-    //   const {
-    //     global,
-    //     clearData,
-    //     loadDataGuest,
-    //     defaultDataDisable,
-    //     defaultDataEnable,
-    //     login,
-    //     logout,
-    //     showMasterLoading,
-    //     hideMasterLoading
-    //   } = this.props
-    //   if (user) {
-    //     login(user.uid,isVerifide)
-    //     hideMasterLoading!()
-    //     this.setState({
-    //       loading: false,
-    //       isVerifide: true
-    //     })
+    this._authourizeService.onAuthStateChanged((isVerifide, user) => {
+      const {
+        global,
+        clearData,
+        loadDataGuest,
+        defaultDataDisable,
+        defaultDataEnable,
+        login,
+        logout,
+        showMasterLoading,
+        hideMasterLoading
+      } = this.props
+      if (user) {
+        login(user.uid,isVerifide)
+        hideMasterLoading()
+        this.setState({
+          loading: false,
+          isVerifide: true
+        })
 
-    //   } else {
-    //     logout()
-    //     hideMasterLoading!()
-    //     this.setState({
-    //       loading: false,
-    //       isVerifide: false
-    //     })
-    //     if (global.defaultLoadDataStatus) {
-    //       defaultDataDisable()
-    //       clearData()
-    //     }
-    //     loadDataGuest()
-    //   }
-    // })
-
+      } else {
+        logout()
+        hideMasterLoading()
+        this.setState({
+          loading: false,
+          isVerifide: false
+        })
+        if (global.defaultLoadDataStatus) {
+          defaultDataDisable()
+          clearData()
+        }
+        loadDataGuest()
+      }
+    })
   }
 
   /**
@@ -173,6 +172,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 
 const mapStateToProps = (state) => {
   const { authorize, global, user, post, notify, circle } = state
+
   return {
     guest: authorize.guest,
     uid: authorize.uid,
@@ -182,4 +182,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MasterComponent))
+export default connect(mapStateToProps, mapDispatchToProps)(MasterComponent)

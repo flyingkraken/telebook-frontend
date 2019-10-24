@@ -10,7 +10,7 @@ import { Map, fromJS } from 'immutable'
  * @param {object} state
  * @param {object} action
  */
-export const globalReducer = (state = Map(), action) => {
+export const globalReducer = (state = Map({progress:{visible: true}}), action) => {
   const { payload } = action
   switch (action.type) {
     case GlobalActionType.PROGRESS_CHANGE:

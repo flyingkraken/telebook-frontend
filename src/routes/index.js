@@ -3,5 +3,5 @@ import HomeRouter from './HomeRouter'
 
 export {
     MasterRouter,
-     HomeRouter
+    HomeRouter
 }

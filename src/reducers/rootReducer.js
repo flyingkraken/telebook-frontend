@@ -1,7 +1,4 @@
-import { localeReducer as locale } from 'react-localize-redux'
-import {
-  combineReducers
-} from 'redux-immutable'
+import { combineReducers } from 'redux'
 
 // - Import reducers
 import { authorizeReducer } from './authorizeReducer'
@@ -14,11 +11,10 @@ import { postReducer } from './postReducer'
 import { userReducer } from './userReducer'
 // import { voteReducer } from './votes'
 import { serverReducer } from './serverReducer'
-import { connectRouter } from 'connected-react-router/immutable'
+import { connectRouter } from 'connected-react-router'
 
 // - Reducers
 export const rootReducer = (history) => combineReducers({
-    locale,
     // imageGallery: imageGalleryReducer,
     post: postReducer,
     circle: circleReducer,

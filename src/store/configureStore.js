@@ -14,7 +14,7 @@ let initialState = {
 }
 
 // - Config and create store of redux
-let store = redux.createStore(rootReducer, initialState, redux.compose(
+let store = redux.createStore(rootReducer(history), initialState, redux.compose(
   redux.applyMiddleware(thunk, routerMiddleware(history))
 ))
 

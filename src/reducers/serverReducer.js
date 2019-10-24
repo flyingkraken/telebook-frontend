@@ -1,10 +1,9 @@
 // - Import react components
 import _ from 'lodash'
-import { Map } from 'immutable'
 
 // - Import action types
 import { ServerActionType } from '../constants/serverActionType'
-
+import { Map } from 'immutable'
 // Import domain
 
 // import { ServerState } from './ServerState'

@@ -6,7 +6,6 @@ export class LoginUser {
    _displayName = '',
    _email = '',
    _avatarURL = ''
-
   ) {
     this._uid = _uid
     this._emailVerified = _emailVerified
