@@ -1,7 +1,7 @@
 import { Profile } from '../../class/users'
 
 // - Import react components
-import { firebaseRef, firebaseAuth, db } from '../../firestoreClient'
+import { firebaseRef, firebaseAuth, db } from '../../fireStoreClient'
 
 import { User, UserProvider } from '../../class/users'
 import { LoginUser, RegisterUserResult } from '../../class/authorize'

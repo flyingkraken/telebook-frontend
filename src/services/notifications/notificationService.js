@@ -1,4 +1,4 @@
-import { firebaseRef, firebaseAuth, db } from '../../firestoreClient'
+import { firebaseRef, firebaseAuth, db } from '../../fireStoreClient'
 
 import { SocialError } from '../../class/common'
 

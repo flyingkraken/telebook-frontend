@@ -8,7 +8,7 @@ import { LinearProgress } from 'material-ui/Progress'
 // - Import components
 
 import MasterLoadingComponent from './MasterLoadingComponent'
-import MasterRouter from 'routes/MasterRouter'
+import MasterRouter from '../../routes/MasterRouter'
 // import { ServiceProvide, IServiceProvider } from 'core/factories'
 // import { IAuthorizeService } from 'core/services/authorize'
 

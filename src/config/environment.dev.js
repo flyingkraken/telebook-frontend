@@ -7,7 +7,7 @@ export const environment = {
     storageBucket: "telebook-107e4.appspot.com",
     messagingSenderId: "589435912037",
     appId: "1:589435912037:web:d5da8d43237cbde87aeb8c"
-  };,
+  },
   settings: {
     enabledOAuthLogin: true,
     appName: 'Telebook',

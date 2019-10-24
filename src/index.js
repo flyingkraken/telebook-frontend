@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 
-import config from 'src/config'
+import config from './config'
 
 import { Provider } from 'react-redux'
-import configureStore from 'store/configureStore'
+import configureStore from './store/configureStore'
 import { ConnectedRouter } from 'react-router-redux'
 
 import './styles/index.css';
-import MasterComponent from './components/master'
+import MasterComponent from './components/master/MasterComponent';
 
 import * as serviceWorker from './serviceWorker';
 

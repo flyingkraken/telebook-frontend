@@ -18,7 +18,12 @@
     "react-router-dom": "5.0.1",
     "react-scripts": "3.2.0",
     "redux": "4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "reducers": "latest",
+    "firebase": "latest",
+    "connected-react-router": "^6.0.0-beta.1",
+    "react-localize-redux": "git+https://git@github.com/Qolzam/react-localize-redux.git",
+    "redux-immutable": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
